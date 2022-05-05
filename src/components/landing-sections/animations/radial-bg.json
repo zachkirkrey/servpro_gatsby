@@ -1,0 +1,1642 @@
+{
+  "v": "5.7.4",
+  "fr": 24,
+  "ip": 0,
+  "op": 358,
+  "w": 1920,
+  "h": 1080,
+  "nm": "RADIAL BG BUILD",
+  "ddd": 0,
+  "assets": [
+    {
+      "id": "comp_0",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 4,
+          "nm": "Shape Layer 2",
+          "parent": 2,
+          "td": 1,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [0, 0, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [0, 0, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": {
+                    "a": 0,
+                    "k": 0,
+                    "ix": 1,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sum(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').start, 0.5);"
+                  },
+                  "e": {
+                    "a": 0,
+                    "k": 58,
+                    "ix": 2,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').end, 0.5);"
+                  },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": {
+                    "a": 0,
+                    "k": 67,
+                    "ix": 5,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Stroke 1').strokeWidth, 5);"
+                  },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 4,
+          "nm": "Shape Layer 1",
+          "tt": 2,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [972.613, 540, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [-76.887, 31.5, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": { "a": 0, "k": 0, "ix": 1 },
+                  "e": { "a": 0, "k": 35, "ix": 2 },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": { "a": 0, "k": 115, "ix": 5 },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_1",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 4,
+          "nm": "Shape Layer 2",
+          "parent": 2,
+          "td": 1,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [0, 0, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [0, 0, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": {
+                    "a": 0,
+                    "k": 0,
+                    "ix": 1,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sum(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').start, 0.5);"
+                  },
+                  "e": {
+                    "a": 0,
+                    "k": 58,
+                    "ix": 2,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').end, 0.5);"
+                  },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": {
+                    "a": 0,
+                    "k": 67,
+                    "ix": 5,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Stroke 1').strokeWidth, 5);"
+                  },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 4,
+          "nm": "Shape Layer 1",
+          "tt": 2,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [972.613, 540, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [-76.887, 31.5, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": { "a": 0, "k": 0, "ix": 1 },
+                  "e": { "a": 0, "k": 15, "ix": 2 },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": { "a": 0, "k": 18, "ix": 5 },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_2",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 4,
+          "nm": "Shape Layer 2",
+          "parent": 2,
+          "td": 1,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [0, 0, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [0, 0, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": {
+                    "a": 0,
+                    "k": 0,
+                    "ix": 1,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sum(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').start, 0.5);"
+                  },
+                  "e": {
+                    "a": 0,
+                    "k": 58,
+                    "ix": 2,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').end, 0.5);"
+                  },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": {
+                    "a": 0,
+                    "k": 67,
+                    "ix": 5,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Stroke 1').strokeWidth, 5);"
+                  },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 4,
+          "nm": "Shape Layer 1",
+          "tt": 2,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [972.613, 540, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [-76.887, 31.5, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": { "a": 0, "k": 0, "ix": 1 },
+                  "e": { "a": 0, "k": 24, "ix": 2 },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": { "a": 0, "k": 66, "ix": 5 },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_3",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 4,
+          "nm": "Shape Layer 2",
+          "parent": 2,
+          "td": 1,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [0, 0, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [0, 0, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": {
+                    "a": 0,
+                    "k": 0,
+                    "ix": 1,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sum(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').start, 0.5);"
+                  },
+                  "e": {
+                    "a": 0,
+                    "k": 58,
+                    "ix": 2,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').end, 0.5);"
+                  },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": {
+                    "a": 0,
+                    "k": 67,
+                    "ix": 5,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Stroke 1').strokeWidth, 5);"
+                  },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 4,
+          "nm": "Shape Layer 1",
+          "tt": 2,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [972.613, 540, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [-76.887, 31.5, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": { "a": 0, "k": 0, "ix": 1 },
+                  "e": { "a": 0, "k": 69, "ix": 2 },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": { "a": 0, "k": 27, "ix": 5 },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_4",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 4,
+          "nm": "Shape Layer 2",
+          "parent": 2,
+          "td": 1,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [0, 0, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [0, 0, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": {
+                    "a": 0,
+                    "k": 0,
+                    "ix": 1,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sum(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').start, 0.5);"
+                  },
+                  "e": {
+                    "a": 0,
+                    "k": 58,
+                    "ix": 2,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').end, 0.5);"
+                  },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": {
+                    "a": 0,
+                    "k": 67,
+                    "ix": 5,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Stroke 1').strokeWidth, 5);"
+                  },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 4,
+          "nm": "Shape Layer 1",
+          "tt": 2,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [972.613, 540, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [-76.887, 31.5, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": { "a": 0, "k": 0, "ix": 1 },
+                  "e": { "a": 0, "k": 69, "ix": 2 },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": { "a": 0, "k": 39, "ix": 5 },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_5",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 4,
+          "nm": "Shape Layer 2",
+          "parent": 2,
+          "td": 1,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [0, 0, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [0, 0, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": {
+                    "a": 0,
+                    "k": 0,
+                    "ix": 1,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sum(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').start, 0.25);"
+                  },
+                  "e": {
+                    "a": 0,
+                    "k": 58,
+                    "ix": 2,
+                    "x": "var $bm_rt;\n$bm_rt = $bm_sub(thisComp.layer('Shape Layer 1').content('Ellipse 1').content('Trim Paths 1').end, 0.25);"
+                  },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": { "a": 0, "k": 79, "ix": 5 },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 4,
+          "nm": "Shape Layer 1",
+          "tt": 2,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100, "ix": 11 },
+            "r": { "a": 0, "k": 0, "ix": 10 },
+            "p": { "a": 0, "k": [972.613, 540, 0], "ix": 2, "l": 2 },
+            "a": { "a": 0, "k": [-76.887, 31.5, 0], "ix": 1, "l": 2 },
+            "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+          },
+          "ao": 0,
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "d": 1,
+                  "ty": "el",
+                  "s": { "a": 0, "k": [721, 721], "ix": 2 },
+                  "p": { "a": 0, "k": [0, 0], "ix": 3 },
+                  "nm": "Ellipse Path 1",
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "hd": false
+                },
+                {
+                  "ty": "tm",
+                  "s": { "a": 0, "k": 0, "ix": 1 },
+                  "e": { "a": 0, "k": 30, "ix": 2 },
+                  "o": { "a": 0, "k": 0, "ix": 3 },
+                  "m": 1,
+                  "ix": 2,
+                  "nm": "Trim Paths 1",
+                  "mn": "ADBE Vector Filter - Trim",
+                  "hd": false
+                },
+                {
+                  "ty": "st",
+                  "c": {
+                    "a": 0,
+                    "k": [0.470588235294, 0.745098039216, 0.125490196078, 1],
+                    "ix": 3
+                  },
+                  "o": { "a": 0, "k": 100, "ix": 4 },
+                  "w": { "a": 0, "k": 89, "ix": 5 },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "bm": 0,
+                  "nm": "Stroke 1",
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-89.5, 31.5], "ix": 2 },
+                  "a": { "a": 0, "k": [0, 0], "ix": 1 },
+                  "s": { "a": 0, "k": [100, 100], "ix": 3 },
+                  "r": { "a": 0, "k": 0, "ix": 6 },
+                  "o": { "a": 0, "k": 100, "ix": 7 },
+                  "sk": { "a": 0, "k": 0, "ix": 4 },
+                  "sa": { "a": 0, "k": 0, "ix": 5 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Ellipse 1",
+              "np": 4,
+              "cix": 2,
+              "bm": 0,
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 360,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "ddd": 0,
+      "ind": 1,
+      "ty": 3,
+      "nm": "GLOW",
+      "sr": 1,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": { "a": 0, "k": [1059.107, 554.941, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [1920, 1080, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "ef": [
+        {
+          "ty": 5,
+          "nm": "Glow",
+          "np": 16,
+          "mn": "ADBE Glo2",
+          "ix": 1,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "Glow Based On",
+              "mn": "ADBE Glo2-0001",
+              "ix": 1,
+              "v": { "a": 0, "k": 2, "ix": 1 }
+            },
+            {
+              "ty": 0,
+              "nm": "Glow Threshold",
+              "mn": "ADBE Glo2-0002",
+              "ix": 2,
+              "v": { "a": 0, "k": 158.1, "ix": 2 }
+            },
+            {
+              "ty": 0,
+              "nm": "Glow Radius",
+              "mn": "ADBE Glo2-0003",
+              "ix": 3,
+              "v": { "a": 0, "k": 15, "ix": 3 }
+            },
+            {
+              "ty": 0,
+              "nm": "Glow Intensity",
+              "mn": "ADBE Glo2-0004",
+              "ix": 4,
+              "v": { "a": 0, "k": 0.8, "ix": 4 }
+            },
+            {
+              "ty": 7,
+              "nm": "Composite Original",
+              "mn": "ADBE Glo2-0005",
+              "ix": 5,
+              "v": { "a": 0, "k": 2, "ix": 5 }
+            },
+            {
+              "ty": 7,
+              "nm": "Glow Operation",
+              "mn": "ADBE Glo2-0006",
+              "ix": 6,
+              "v": { "a": 0, "k": 6, "ix": 6 }
+            },
+            {
+              "ty": 7,
+              "nm": "Glow Colors",
+              "mn": "ADBE Glo2-0007",
+              "ix": 7,
+              "v": { "a": 0, "k": 2, "ix": 7 }
+            },
+            {
+              "ty": 7,
+              "nm": "Color Looping",
+              "mn": "ADBE Glo2-0008",
+              "ix": 8,
+              "v": { "a": 0, "k": 3, "ix": 8 }
+            },
+            {
+              "ty": 0,
+              "nm": "Color Loops",
+              "mn": "ADBE Glo2-0009",
+              "ix": 9,
+              "v": { "a": 0, "k": 1, "ix": 9 }
+            },
+            {
+              "ty": 0,
+              "nm": "Color Phase",
+              "mn": "ADBE Glo2-0010",
+              "ix": 10,
+              "v": { "a": 0, "k": 0, "ix": 10 }
+            },
+            {
+              "ty": 0,
+              "nm": "A & B Midpoint",
+              "mn": "ADBE Glo2-0011",
+              "ix": 11,
+              "v": { "a": 0, "k": 0.5, "ix": 11 }
+            },
+            {
+              "ty": 2,
+              "nm": "Color A",
+              "mn": "ADBE Glo2-0012",
+              "ix": 12,
+              "v": { "a": 0, "k": [1, 1, 1, 0], "ix": 12 }
+            },
+            {
+              "ty": 2,
+              "nm": "Color B",
+              "mn": "ADBE Glo2-0013",
+              "ix": 13,
+              "v": { "a": 0, "k": [0, 0, 0, 0], "ix": 13 }
+            },
+            {
+              "ty": 7,
+              "nm": "Glow Dimensions",
+              "mn": "ADBE Glo2-0014",
+              "ix": 14,
+              "v": { "a": 0, "k": 1, "ix": 14 }
+            }
+          ]
+        }
+      ],
+      "ip": 0,
+      "op": 358,
+      "st": -48,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 2,
+      "ty": 3,
+      "nm": "OPTICS DISTORT",
+      "sr": 1,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": { "a": 0, "k": [1097.107, 554.941, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [998, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "ef": [
+        {
+          "ty": 5,
+          "nm": "Optics Compensation",
+          "np": 8,
+          "mn": "ADBE Optics Compensation",
+          "ix": 1,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "Field Of View (FOV)",
+              "mn": "ADBE Optics Compensation-0001",
+              "ix": 1,
+              "v": { "a": 0, "k": 50, "ix": 1 }
+            },
+            {
+              "ty": 7,
+              "nm": "Reverse Lens Distortion",
+              "mn": "ADBE Optics Compensation-0002",
+              "ix": 2,
+              "v": { "a": 0, "k": 1, "ix": 2 }
+            },
+            {
+              "ty": 7,
+              "nm": "FOV Orientation",
+              "mn": "ADBE Optics Compensation-0003",
+              "ix": 3,
+              "v": { "a": 0, "k": 1, "ix": 3 }
+            },
+            {
+              "ty": 3,
+              "nm": "View Center",
+              "mn": "ADBE Optics Compensation-0004",
+              "ix": 4,
+              "v": { "a": 0, "k": [962, 540], "ix": 4 }
+            },
+            {
+              "ty": 7,
+              "nm": "Optimal Pixels (Invalidates Reversal)",
+              "mn": "ADBE Optics Compensation-0005",
+              "ix": 5,
+              "v": { "a": 0, "k": 0, "ix": 5 }
+            },
+            {
+              "ty": 7,
+              "nm": "Resize",
+              "mn": "ADBE Optics Compensation-0006",
+              "ix": 6,
+              "v": { "a": 0, "k": 1, "ix": 6 }
+            }
+          ]
+        }
+      ],
+      "ip": 0,
+      "op": 358,
+      "st": -48,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 3,
+      "ty": 0,
+      "nm": "Circle 12",
+      "refId": "comp_0",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(60, 50);"
+        },
+        "r": {
+          "a": 0,
+          "k": 85,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_sum($bm_mul(time, 10), 90);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [71, 71, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 4,
+      "ty": 0,
+      "nm": "Circle 12",
+      "refId": "comp_0",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(90, 50);"
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_mul(time, -35);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [78, 78, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 5,
+      "ty": 0,
+      "nm": "Circle 11",
+      "refId": "comp_1",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(90, 50);"
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_sum($bm_mul(time, 35), 260);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [52, 52, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 6,
+      "ty": 0,
+      "nm": "Circle 11",
+      "refId": "comp_1",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(90, 50);"
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_sum($bm_mul(time, 40), 90);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [52, 52, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 7,
+      "ty": 0,
+      "nm": "Circle 9",
+      "refId": "comp_2",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(90, 80);"
+        },
+        "r": {
+          "a": 0,
+          "k": -85,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_sum($bm_mul(time, 30), 100);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [46, 46, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 8,
+      "ty": 0,
+      "nm": "Circle 9",
+      "refId": "comp_2",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(90, 30);"
+        },
+        "r": {
+          "a": 0,
+          "k": -85,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_mul(time, 30);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [46, 46, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 9,
+      "ty": 0,
+      "nm": "Circle 3",
+      "refId": "comp_3",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(60, 50);"
+        },
+        "r": {
+          "a": 0,
+          "k": 96,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_mul(time, -15);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [71.667, 71.667, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 10,
+      "ty": 0,
+      "nm": "Circle 2",
+      "refId": "comp_4",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(90, 70);"
+        },
+        "r": {
+          "a": 0,
+          "k": 93,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_mul(time, -10);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [57.6, 57.6, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 11,
+      "ty": 0,
+      "nm": "Circle 1",
+      "refId": "comp_5",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(10, 90);"
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_sum($bm_mul(time, -25), 180);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [97.417, 97.417, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 12,
+      "ty": 0,
+      "nm": "Circle 1",
+      "refId": "comp_5",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11,
+          "x": "var $bm_rt;\n$bm_rt = wiggle(90, 35);"
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10,
+          "x": "var $bm_rt;\n$bm_rt = $bm_mul(time, -25);"
+        },
+        "p": { "a": 0, "k": [960.496, 538.836, 0], "ix": 2, "l": 2 },
+        "a": { "a": 0, "k": [960, 540, 0], "ix": 1, "l": 2 },
+        "s": { "a": 0, "k": [97.417, 97.417, 100], "ix": 6, "l": 2 }
+      },
+      "ao": 0,
+      "w": 1920,
+      "h": 1080,
+      "ip": 0,
+      "op": 358,
+      "st": 0,
+      "bm": 0
+    }
+  ],
+  "markers": []
+}

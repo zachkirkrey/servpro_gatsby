@@ -1,0 +1,66 @@
+/* Prevent Horizontal Overflow */
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: Graphie, sans-serif !important;
+}
+
+html:not(.wf-graphie-n4-active) {
+  line-height: 1.8;
+  font-family: sans-serif;
+  word-spacing: -0.0063em;
+  letter-spacing: 0.0563em;
+  font-weight: 300;
+}
+
+body {
+  color: #2b3b48;
+  font-size: 16px;
+}
+
+.my-masonry-grid {
+  display: flex;
+  margin: 0 -15px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid-column {
+  padding: 0 15px; /* gutter size */
+  background-clip: padding-box;
+}
+/* Style your items */
+.my-masonry-grid-column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 30px;
+}
+
+.hover-default {
+  transition: opacity 0.5s ease-out;
+}
+.hover-default:hover {
+  opacity: 0.8;
+  transition-duration: 0.1s;
+}
+.hover-default:active {
+  opacity: 0.6;
+}
+
+@media (min-width: 1024px) {
+  [data-cta='true'] + div,
+  [data-cta='true'] + section {
+    padding-top: 11rem;
+  }
+}
+
+.font-family-video {
+  font-family: Video, Graphie, sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+[data-show-animation] {
+  opacity: 0;
+  will-change: transform;
+}

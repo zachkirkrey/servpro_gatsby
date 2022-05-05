@@ -1,0 +1,50 @@
+[build]
+
+[context.production.environment]
+ALGOLIA_ADMIN_API_KEY="ee5fa3035d420655ffa33ec9bd348ac1"
+ALGOLIA_API_KEY="dedf33c1fe340a83545be81a763125eec97e315e99a412dd60ddee1932cdb90e"
+ALGOLIA_APP_ID="SXQTSMSLU9"
+ALGOLIA_BASE_URL="https://crawler.algolia.com"
+ALGOLIA_FRANCHISE_LOCATIONS_INDEX="franchise_locations_prod"
+ALGOLIA_SEARCH_API_KEY="e6f96becf89de7853f295149ce24705b"
+CONTENTSTACK_ACCESS_TOKEN="cs7808d60366163849c9d94caf"
+CONTENTSTACK_API_KEY="blt0a0cb058815d4d96"
+CONTENTSTACK_ENVIRONMENT="production"
+CONTENTSTACK_DELIVERY_TOKEN="cs6a671f48ca9d62580df0bc07"
+CONTENTSTACK_MANAGEMENT_TOKEN="cscf22416c50d3a4b19c0a378b"
+FRANCHISE_INFO_API="https://franchiseadmin.servpro.com/franchiseinfo/GetAllActiveFranchiseInfo"
+FRANCHISE_SEARCH_API="https://franchiseadmin.servpro.com/franchiseinfo/GetFranchisesByLatLong"
+NETLIFY_USE_YARN="true"
+OPTIMIZE_CMS_FOR_PROD="true"
+YEXT_API_KEY="497029d80ce5e9cb1325f0f7f654b48c"
+YEXT_API_V="20210816"
+YEXT_ENTITIES_API="https://api.yext.com/v2/accounts/me/entities"
+YEXT_REPORTS_API="https://api.yext.com/v2/accounts/me/analytics/reports"
+
+[context.staging.environment]
+ALGOLIA_ADMIN_API_KEY="ee5fa3035d420655ffa33ec9bd348ac1"
+ALGOLIA_API_KEY="dedf33c1fe340a83545be81a763125eec97e315e99a412dd60ddee1932cdb90e"
+ALGOLIA_APP_ID="SXQTSMSLU9"
+ALGOLIA_BASE_URL="https://crawler.algolia.com"
+ALGOLIA_FRANCHISE_LOCATIONS_INDEX="franchise_locations_prod"
+ALGOLIA_SEARCH_API_KEY="e6f96becf89de7853f295149ce24705b"
+CONTENTSTACK_ACCESS_TOKEN="cs7808d60366163849c9d94caf"
+CONTENTSTACK_API_KEY="blt0a0cb058815d4d96"
+CONTENTSTACK_ENVIRONMENT="staging"
+CONTENTSTACK_DELIVERY_TOKEN="cs722e530e85fd6af37a37415b"
+CONTENTSTACK_MANAGEMENT_TOKEN="cscf22416c50d3a4b19c0a378b"
+FRANCHISE_INFO_API="https://franchiseadmin.servpro.com/franchiseinfo/GetAllActiveFranchiseInfo"
+FRANCHISE_SEARCH_API="https://franchiseadmin.servpro.com/franchiseinfo/GetFranchisesByLatLong"
+NETLIFY_USE_YARN="true"
+OPTIMIZE_CMS_FOR_PROD="FALSE"
+YEXT_API_KEY="497029d80ce5e9cb1325f0f7f654b48c"
+YEXT_API_V="20210816"
+YEXT_ENTITIES_API="https://api.yext.com/v2/accounts/me/entities"
+YEXT_REPORTS_API="https://api.yext.com/v2/accounts/me/analytics/reports"
+
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"

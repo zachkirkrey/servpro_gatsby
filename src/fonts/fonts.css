@@ -1,0 +1,145 @@
+/* Serve 'Graphie' font locally */
+@font-face {
+  font-family: Graphie;
+  font-weight: 100;
+  font-style: normal;
+  src: url("./Graphie-Thin.woff") format("woff"),
+       url("./Graphie-Thin.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 100;
+  font-style: italic;
+  src: url("./Graphie-ThinItalic.woff") format("woff"),
+       url("./Graphie-ThinItalic.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 200;
+  font-style: normal;
+  src: url("./Graphie-ExtraLight.woff") format("woff"),
+       url("./Graphie-ExtraLight.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 200;
+  font-style: italic;
+  src: url("./Graphie-ExtraLightItalic.woff") format("woff"),
+       url("./Graphie-ExtraLightItalic.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 300;
+  font-style: normal;
+  src: url("./Graphie-Light.woff") format("woff"),
+       url("./Graphie-Light.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 300;
+  font-style: italic;
+  src: url("./Graphie-LightItalic.woff") format("woff"),
+       url("./Graphie-LightItalic.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 400;
+  font-style: normal;
+  src: url("./Graphie-Book.woff") format("woff"),
+       url("./Graphie-Book.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 400;
+  font-style: italic;
+  src: url("./Graphie-BookItalic.woff") format("woff"),
+       url("./Graphie-BookItalic.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 500;
+  font-style: normal;
+  src: url("./Graphie-Regular.woff") format("woff"),
+       url("./Graphie-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 500;
+  font-style: italic;
+  src: url("./Graphie-Italic.woff") format("woff"),
+       url("./Graphie-Italic.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 600;
+  font-style: normal;
+  src: url("./Graphie-SemiBold.woff") format("woff"),
+       url("./Graphie-SemiBold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 600;
+  font-style: italic;
+  src: url("./Graphie-SemiBoldItalic.woff") format("woff"),
+       url("./Graphie-SemiBoldItalic.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 700;
+  font-style: normal;
+  src: url("./Graphie-Bold.woff") format("woff"),
+       url("./Graphie-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 700;
+  font-style: italic;
+  src: url("./Graphie-BoldItalic.woff") format("woff"),
+       url("./Graphie-BoldItalic.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 800;
+  font-style: normal;
+  src: url("./Graphie-ExtraBold.woff") format("woff"),
+       url("./Graphie-ExtraBold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 800;
+  font-style: italic;
+  src: url("./Graphie-ExtraBoldItalic.woff") format("woff"),
+       url("./Graphie-ExtraBoldItalic.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 900;
+  font-style: normal;
+  src: url("./Graphie-ExtraBold.woff") format("woff"),
+       url("./Graphie-ExtraBold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Graphie;
+  font-weight: 900;
+  font-style: italic;
+  src: url("./Graphie-ExtraBoldItalic.woff") format("woff"),
+       url("./Graphie-ExtraBoldItalic.woff2") format("woff2");
+  font-display: swap;
+}
