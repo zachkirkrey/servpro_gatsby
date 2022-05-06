@@ -117,6 +117,7 @@ export const query = graphql`
     featured_image {
       filename
       title
+      description
       url
       localAsset {
         childImageSharp {
@@ -137,6 +138,7 @@ export const query = graphql`
     featured_image {
       filename
       title
+      description
       url
       localAsset {
         childImageSharp {
@@ -160,6 +162,7 @@ export const query = graphql`
         image {
           filename
           title
+          description
           url
           localAsset {
             childImageSharp {

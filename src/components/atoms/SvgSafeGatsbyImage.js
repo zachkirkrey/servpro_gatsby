@@ -3,8 +3,7 @@ import React from 'react'
 
 const SvgSafeGatsbyImage = ({ image, ...props }) => {
   // Expects { filename, title, url } for all + { localAsset } for non-SVG
-  const { filename, localAsset, title, url } = image
-
+  const { filename, localAsset, description, url } = image
   // Bulletproofing:
   const isSVG = () => {
     const path = filename ? filename : url
@@ -16,7 +15,7 @@ const SvgSafeGatsbyImage = ({ image, ...props }) => {
     return !!path && path.slice(-4) === '.gif'
   }
 
-  const altText = () => props.alt ?? title ?? ''
+  const altText = () => props.alt ?? description ?? ''
 
   // TODO: refactor nested ternaries
   // eslint-disable-next-line no-nested-ternary

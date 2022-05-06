@@ -86,7 +86,7 @@ const SplitHero = ({ data, localCtaData, handleChangeLocation, ...props }) => {
               <HeroImage
                 tw="w-full h-full"
                 image={image}
-                alt={image.title}
+                alt={image.description}
                 sizes="(min-width: 725px) 725px, 100vw"
               />
             )}

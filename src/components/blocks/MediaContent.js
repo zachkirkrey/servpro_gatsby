@@ -44,7 +44,6 @@ const MediaContent = ({ data }) => {
     hide_background,
     media_full_width
   } = settings || false
-
   function generateVideoObject(videoUrl, embedVideoUrl) {
     if (!(videoUrl || embedVideoUrl)) {
       return null
@@ -109,7 +108,7 @@ const MediaContent = ({ data }) => {
             <MediaImage
               fullSize={!!media_fill}
               image={image}
-              alt={image.title}
+              alt={image.description}
             />
           )}
           {!!videoObject?.src && (
@@ -339,6 +338,7 @@ export const query = graphql`
         image {
           filename
           title
+          description
           url
           localAsset {
             childImageSharp {

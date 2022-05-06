@@ -18,7 +18,10 @@ const FullwidthHero = ({ data, localCtaData, handleChangeLocation }) => {
   return (
     <HeroSection data-cta={!!has_location_widget}>
       {hasImage && (
-        <HeroImageBg image={getImage(image.localAsset)} alt={image.title} />
+        <HeroImageBg
+          image={getImage(image.localAsset)}
+          alt={image.description}
+        />
       )}
       <Container>
         <FullwidthWrap hasImage={hasImage} hasCTA={!!has_location_widget}>

@@ -22,7 +22,7 @@ const ArticleCard = ({ article, htmlContent = true }) => {
       key={title}>
       {featured_image?.url && (
         <CardImageContainer to={url}>
-          <CardImage image={featured_image} alt={featured_image.title} />
+          <CardImage image={featured_image} alt={featured_image.description} />
         </CardImageContainer>
       )}
       <GridContainer>
