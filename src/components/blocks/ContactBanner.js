@@ -30,7 +30,7 @@ const ContactBanner = ({ data }) => {
       </Container>
       {image?.url && (
         <div tw="absolute inset-0">
-          <StyleImage image={image} alt={image.title} />
+          <StyleImage image={image} alt={image.description} />
         </div>
       )}
     </div>
@@ -56,6 +56,7 @@ export const query = graphql`
           filename
           title
           url
+          description
           localAsset {
             url
             childImageSharp {

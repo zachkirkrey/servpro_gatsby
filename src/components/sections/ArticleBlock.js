@@ -20,7 +20,7 @@ const ArticleBlock = ({ isIndex, withImage, article, isMultiBlogroll }) => {
     <ArticleContainer isIndex={isIndex}>
       {featured_image?.url && withImage && (
         <CardImageContainer>
-          <CardImage image={featured_image} alt={featured_image.title} />
+          <CardImage image={featured_image} alt={featured_image.description} />
         </CardImageContainer>
       )}
       <div>

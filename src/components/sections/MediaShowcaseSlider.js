@@ -71,7 +71,7 @@ const MediaShowcaseSlider = ({ data }) => {
                       {image?.url && (
                         <SvgSafeGatsbyImage
                           image={image}
-                          alt={image.title}
+                          alt={image.description}
                           className="media"
                         />
                       )}

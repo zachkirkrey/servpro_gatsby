@@ -21,7 +21,7 @@ const ResourceDetail = ({ data }) => {
           {!!image?.url && (
             <ImageWrap href={read_more}>
               <div tw="absolute inset-0 object-cover">
-                <Image image={image} alt={image.title} />
+                <Image image={image} alt={image.description} />
               </div>
             </ImageWrap>
           )}
@@ -78,6 +78,7 @@ export const query = graphql`
         filename
         title
         url
+        description
         localAsset {
           childImageSharp {
             gatsbyImageData(
