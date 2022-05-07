@@ -88,6 +88,8 @@ const IconBlurbsSlider = ({ data }) => {
       <h2 tw="text-32px text-primary-black">{apCaseOnlyTitleTags(heading)}</h2>
     )
   }
+  //sub heading was not being shown, without any reason might be some editor issue,
+  //after reading and debugging code, i just moved the code block renderHeading and it worked
 
   function renderLink(link, link_as_text) {
     if (!link || !link.title) {
