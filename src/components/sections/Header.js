@@ -195,6 +195,6 @@ const StyledArrowDropdown = styled(ArrowDropdown)(({ menuopen }) => [
   menuopen && tw`rotate-180`
 ])
 
-const MenuText = tw.span`hidden lg:block text-sm`
+const MenuText = tw.span`lg:block text-sm`
 
 export default Header
