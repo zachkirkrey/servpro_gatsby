@@ -8,7 +8,6 @@ import Container from '@atoms/Container'
 import paddingDefault from '@components/utils/paddingDefault'
 import orderBy from 'lodash/orderBy'
 import uniqBy from 'lodash/uniqBy'
-import forEach from 'lodash/forEach'
 import Seo from '../components/utils/Seo'
 
 const MetroStatePage = ({ data, pageContext }) => {
