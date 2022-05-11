@@ -7,6 +7,8 @@ import SplitHero from '@components/sections/SplitHero'
 import Container from '@atoms/Container'
 import paddingDefault from '@components/utils/paddingDefault'
 import orderBy from 'lodash/orderBy'
+import uniqBy from 'lodash/uniqBy'
+import forEach from 'lodash/forEach'
 import Seo from '../components/utils/Seo'
 
 const MetroStatePage = ({ data, pageContext }) => {
@@ -19,6 +21,8 @@ const MetroStatePage = ({ data, pageContext }) => {
     franchiseLinks,
     seo
   } = pageContext
+
+  const franchiseLinksUniq = uniqBy(franchiseLinks, 'yext.name')
 
   const replacements = {
     stateName
@@ -71,7 +75,7 @@ const MetroStatePage = ({ data, pageContext }) => {
             <Divider />
 
             <MetroList>
-              {orderBy(franchiseLinks, ['yext.name']).map(fr => {
+              {orderBy(franchiseLinksUniq, ['yext.name']).map(fr => {
                 return (
                   <MetroName key={fr.yext.name}>
                     <Link to={`${fr.permalink}`} title={fr.yext.name}>
