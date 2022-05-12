@@ -7,7 +7,11 @@ import formatPhoneLink from '@utils/format-phone-link'
 import { RatingSummary } from '../atoms/RatingSummary'
 
 const Nearest = ({ localCtaData, onChangeLocation }) => {
-  const { geo: locatorGeo, franchise: locatorFranchise } = useLocator()
+  const {
+    geo: locatorGeo,
+    franchise: locatorFranchise,
+    cityName
+  } = useLocator()
 
   const geo = localCtaData?.geo ? localCtaData?.geo : locatorGeo
   const franchise = localCtaData?.franchise
@@ -30,6 +34,7 @@ const Nearest = ({ localCtaData, onChangeLocation }) => {
           <NearestHeading>Contact your local SERVPRO, serving:</NearestHeading>
           <div tw="mb-5">
             <NearestLocation>
+              {cityName}
               {!!geo && !!geo.city && !!geo.state_short ? (
                 `${geo?.city}, ${geo?.state_short}`
               ) : (
