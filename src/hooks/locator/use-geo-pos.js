@@ -27,6 +27,7 @@ const useGeoPos = () => {
   const [franchise, setFranchise] = useState()
   const [nearby, setNearby] = useState()
   const [status, setStatus] = useState('initial')
+  const [cityName, setCityName] = useState('')
 
   // `react-query` query representing fetchable data:
   const { data: coordsData, status: coordsStatus } = useQuery(
@@ -43,6 +44,7 @@ const useGeoPos = () => {
 
   // DEBUG: Some info()s to show to flow of each status/action.
   useEffect(() => console.info(`GeoPos Status: ${status}`), [status])
+  useEffect(() => console.info(`City Name: ${cityName}`), [cityName])
   useEffect(
     () => console.info(`coords Status: ${coordsStatus}`),
     [coordsStatus]
@@ -225,7 +227,9 @@ const useGeoPos = () => {
     status,
     changeLocation,
     setFranchise,
-    setGeo
+    setGeo,
+    cityName,
+    setCityName
   }
 }
 

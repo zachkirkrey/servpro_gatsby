@@ -24,7 +24,9 @@ const LocatorProvider = props => {
     status: geoStatus,
     changeLocation,
     setFranchise,
-    setGeo
+    setGeo,
+    setCityName,
+    cityName
   } = useGeoPos()
 
   const providerValue = {
@@ -34,7 +36,9 @@ const LocatorProvider = props => {
     status: geoStatus,
     changeLocation,
     setFranchise,
-    setGeo
+    setGeo,
+    setCityName,
+    cityName
   }
 
   return (
