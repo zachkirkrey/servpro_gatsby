@@ -60,18 +60,16 @@ const FranchiseAddressSearchInput = props => {
   const [address, setAddress] = useState(props.value || '')
   const [hints, setHints] = useState([])
   const hintHasBeenSelected = useRef(false)
-  const { geo } = useLocator()
+  const { geo, setCityName } = useLocator()
   const hintsRef = useRef(null)
   const inputRef = useRef(null)
   const typedOnce = useRef(false)
   const hintClassName = props.hintClassName || ''
-
   React.useEffect(() => {
     if (props.value) {
       setAddress(props.value)
     }
   }, [props.value])
-
   const urlGeoPart = React.useMemo(() => {
     if (!geo) {
       return ''
@@ -159,6 +157,9 @@ const FranchiseAddressSearchInput = props => {
     hintHasBeenSelected.current = true
     resetHints()
     setAddress(hint)
+
+    setCityName(hint)
+
     submit(hint)
   }
 
