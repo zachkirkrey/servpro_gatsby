@@ -412,7 +412,7 @@ const Header = styled.div`
       ${tw`mb-8`}
     `};
 `
-const SubHeadline = styled.p`
+const SubHeadline = styled.div`
   ${props =>
     props.darkMode &&
     css`
