@@ -620,6 +620,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type CmsBlockHero {
       has_location_widget: Boolean
       fullwidth_background: Boolean
+      hero_offset: Boolean
       heading: String
       subheading: String
       copy: String

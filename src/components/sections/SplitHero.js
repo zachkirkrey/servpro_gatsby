@@ -17,11 +17,10 @@ const SplitHero = ({ data, localCtaData, handleChangeLocation, ...props }) => {
     heading,
     subheading,
     image,
-    has_location_widget
+    has_location_widget,
+    hero_offset
   } = data
-
   const copyRef = React.useRef(null)
-
   useEffect(() => {
     replaceReview(copyRef)
     replaceButton(copyRef)
@@ -33,7 +32,7 @@ const SplitHero = ({ data, localCtaData, handleChangeLocation, ...props }) => {
       className="js-splitHero"
       tw="relative">
       <HeroWrap hasImage={!!image}>
-        <HeroCol hasCTA={!!has_location_widget}>
+        <HeroCol hasCTA={!!has_location_widget} hasOffset={!!hero_offset}>
           <HeroHeading
             dangerouslySetInnerHTML={{ __html: apCaseOnlyTitleTags(heading) }}
           />
@@ -150,7 +149,7 @@ const HeroWrap = styled.div(({ hasImage }) => [
     }
   `
 ])
-const HeroCol = styled.div(({ hasCTA }) => [
+const HeroCol = styled.div(({ hasCTA, hasOffset }) => [
   `
   @media (min-width: 1024px) {
     width: 60%;
@@ -162,6 +161,14 @@ const HeroCol = styled.div(({ hasCTA }) => [
   px-4 py-8
   xs:px-6
   xl:(pr-16 pl-40 py-16)`,
+  hasOffset &&
+    tw`
+  z-50
+  xs:bg-white lg:bg-opacity-0	
+  xs:mr-7 lg:mr-0
+  xs:ml-7 lg:ml-0
+  xs:-mt-60 md:-mt-80 lg:mt-0`,
+
   hasCTA &&
     tw`
   xl:pb-36
