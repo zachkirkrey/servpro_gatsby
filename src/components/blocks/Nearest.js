@@ -39,6 +39,7 @@ const Nearest = ({ localCtaData, onChangeLocation }) => {
         </>
       )
     }
+
     return <>{cityName}</>
   }
 
