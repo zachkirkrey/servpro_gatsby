@@ -27,20 +27,28 @@ const Nearest = ({ localCtaData, onChangeLocation }) => {
   } = franchise ?? {}
   const { name: frName, mainPhone: frPhone } = yext ?? {}
 
+  function renderCityName() {
+    if (!cityName) {
+      return (
+        <>
+          {!!geo && !!geo.city && !!geo.state_short ? (
+            `${geo?.city}, ${geo?.state_short}`
+          ) : (
+            <div tw="h-8 w-48 bg-warmGray-300 animate-pulse rounded-sm" />
+          )}
+        </>
+      )
+    }
+    return <>{cityName}</>
+  }
+
   return (
     <NearestWrap>
       <div tw="flex justify-between items-center h-36">
         <div>
           <NearestHeading>Contact your local SERVPRO, serving:</NearestHeading>
           <div tw="mb-5">
-            <NearestLocation>
-              {cityName}
-              {!!geo && !!geo.city && !!geo.state_short ? (
-                `${geo?.city}, ${geo?.state_short}`
-              ) : (
-                <div tw="h-8 w-48 bg-warmGray-300 animate-pulse rounded-sm" />
-              )}
-            </NearestLocation>
+            <NearestLocation>{renderCityName()}</NearestLocation>
 
             <AccessibleLink
               onClick={onChangeLocation}
