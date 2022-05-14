@@ -20,7 +20,7 @@ import { defaultShowAnimation } from '../utils/defaultAnimations'
 gsap.registerPlugin(ScrollTrigger)
 
 const HeroSection = () => {
-  const numbers = '402 37 22 651'
+  const numbers = '402 37 22 651 7'
   const containerRef = React.useRef(null)
   const [inViewRef, inView] = useInView()
   const animatedElements = useAnimatedElementsRefs(containerRef)
