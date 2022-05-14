@@ -32,7 +32,11 @@ const Gallery = ({ data }) => {
           className="my-masonry-grid"
           columnClassName="my-masonry-grid-column">
           {images.map((image, idx) => (
-            <SvgSafeGatsbyImage key={idx} image={image} alt={image.title} />
+            <SvgSafeGatsbyImage
+              key={idx}
+              image={image}
+              alt={image.description}
+            />
           ))}
         </Masonry>
       </Container>
@@ -51,6 +55,7 @@ export const query = graphql`
         filename
         title
         url
+        description
         localAsset {
           childImageSharp {
             gatsbyImageData(

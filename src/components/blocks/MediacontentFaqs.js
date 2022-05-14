@@ -34,7 +34,7 @@ const MediacontentFaqs = ({ data }) => {
               <SvgSafeGatsbyImage
                 tw="lg:max-h-full object-contain object-center"
                 image={image}
-                alt={image.title}
+                alt={image.description}
               />
               {!disable_background_dots && <DotPattern />}
             </ImageWrapper>
@@ -91,6 +91,7 @@ export const query = graphql`
         image {
           filename
           title
+          description
           url
           localAsset {
             childImageSharp {

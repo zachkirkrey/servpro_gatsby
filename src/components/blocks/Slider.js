@@ -12,6 +12,7 @@ import TimelineSlider from '@sections/TimelineSlider'
 const Slider = ({ data }) => {
   const { variants } = data || []
   const slider = variants ? variants[0] : []
+  console.info(data)
 
   // eslint-disable-next-line no-confusing-arrow
   const getVariant = () =>
@@ -60,6 +61,7 @@ export const query = graphql`
             featured_image {
               filename
               title
+              description
               url
               localAsset {
                 childImageSharp {

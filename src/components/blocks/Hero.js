@@ -39,6 +39,7 @@ export const query = graphql`
       image {
         filename
         title
+        description
         url
         localAsset {
           childImageSharp {
