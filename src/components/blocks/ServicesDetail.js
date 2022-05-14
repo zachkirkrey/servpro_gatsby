@@ -10,7 +10,6 @@ import apCaseOnlyTitleTags from '@utils/apCaseOnlyTitleTags'
 const ServicesDetail = ({ data }) => {
   const { headline, copy, quicklinks } = data
   const hasQuickLinks = quicklinks?.links?.length > 0
-
   return (
     <Background>
       <StyledContainer>

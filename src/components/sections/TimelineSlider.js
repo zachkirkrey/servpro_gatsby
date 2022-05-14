@@ -152,7 +152,7 @@ const TimelineSlider = ({ data }) => {
                       <SlideImageContainer>
                         {image?.url && (
                           <div tw="absolute inset-0">
-                            <SlideImage image={image} alt={image.title} />
+                            <SlideImage image={image} alt={image.description} />
                           </div>
                         )}
                       </SlideImageContainer>
