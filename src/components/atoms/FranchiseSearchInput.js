@@ -60,7 +60,7 @@ const FranchiseAddressSearchInput = props => {
   const [address, setAddress] = useState(props.value || '')
   const [hints, setHints] = useState([])
   const hintHasBeenSelected = useRef(false)
-  const { geo, setCityName } = useLocator()
+  const { geo } = useLocator()
   const hintsRef = useRef(null)
   const inputRef = useRef(null)
   const typedOnce = useRef(false)
@@ -157,9 +157,6 @@ const FranchiseAddressSearchInput = props => {
     hintHasBeenSelected.current = true
     resetHints()
     setAddress(hint)
-
-    setCityName(hint)
-
     submit(hint)
   }
 

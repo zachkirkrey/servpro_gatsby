@@ -40,9 +40,10 @@ const DrawerAddressItem = ({ data, onChoose }) => {
 const ChangeLocationDrawer = ({ visible, onClose }) => {
   const [qry, setQry] = useState()
   const { data: fr, status: frStatus } = useFranchisesFromAddress(qry)
-  const { nearby, setFranchise, setGeo } = useLocator()
+  const { nearby, setFranchise, setGeo, geo } = useLocator()
   const { changeLocationInputRef } = useChangeLocationLogic()
   const [containerNode, setContainerNode] = React.useState(null)
+
   function setNode(node) {
     if (node === containerNode) {
       return
@@ -63,12 +64,14 @@ const ChangeLocationDrawer = ({ visible, onClose }) => {
 
   const handleChooseLocation = data => {
     setGeo({})
+    const cityName = changeLocationInputRef.current.value
     const {
       address: { city, region: state, postalCode: zip },
       cityCoordinate: { latitude, longitude }
     } = data.yext
+
     setGeo({
-      city,
+      city: cityName ? cityName : city,
       state,
       state_short: state,
       zip,

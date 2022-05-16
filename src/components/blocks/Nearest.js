@@ -7,11 +7,7 @@ import formatPhoneLink from '@utils/format-phone-link'
 import { RatingSummary } from '../atoms/RatingSummary'
 
 const Nearest = ({ localCtaData, onChangeLocation }) => {
-  const {
-    geo: locatorGeo,
-    franchise: locatorFranchise,
-    cityName
-  } = useLocator()
+  const { geo: locatorGeo, franchise: locatorFranchise } = useLocator()
 
   const geo = localCtaData?.geo ? localCtaData?.geo : locatorGeo
   const franchise = localCtaData?.franchise
@@ -27,29 +23,19 @@ const Nearest = ({ localCtaData, onChangeLocation }) => {
   } = franchise ?? {}
   const { name: frName, mainPhone: frPhone } = yext ?? {}
 
-  function renderCityName() {
-    if (!cityName) {
-      return (
-        <>
-          {!!geo && !!geo.city && !!geo.state_short ? (
-            `${geo?.city}, ${geo?.state_short}`
-          ) : (
-            <div tw="h-8 w-48 bg-warmGray-300 animate-pulse rounded-sm" />
-          )}
-        </>
-      )
-    }
-
-    return <>{cityName}</>
-  }
-
   return (
     <NearestWrap>
       <div tw="flex justify-between items-center h-36">
         <div>
           <NearestHeading>Contact your local SERVPRO, serving:</NearestHeading>
           <div tw="mb-5">
-            <NearestLocation>{renderCityName()}</NearestLocation>
+            <NearestLocation>
+              {!!geo && !!geo.city ? (
+                `${geo?.city}`
+              ) : (
+                <div tw="h-8 w-48 bg-warmGray-300 animate-pulse rounded-sm" />
+              )}
+            </NearestLocation>
 
             <AccessibleLink
               onClick={onChangeLocation}
