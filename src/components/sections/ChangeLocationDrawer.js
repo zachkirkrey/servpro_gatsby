@@ -40,7 +40,7 @@ const DrawerAddressItem = ({ data, onChoose }) => {
 const ChangeLocationDrawer = ({ visible, onClose }) => {
   const [qry, setQry] = useState()
   const { data: fr, status: frStatus } = useFranchisesFromAddress(qry)
-  const { nearby, setFranchise, setGeo, geo } = useLocator()
+  const { nearby, setFranchise, setGeo } = useLocator()
   const { changeLocationInputRef } = useChangeLocationLogic()
   const [containerNode, setContainerNode] = React.useState(null)
 
