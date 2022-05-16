@@ -63,14 +63,15 @@ const ChangeLocationDrawer = ({ visible, onClose }) => {
 
   const handleChooseLocation = data => {
     setGeo({})
+    const cityName = changeLocationInputRef.current.value
     const {
       address: { city, region: state, postalCode: zip },
       cityCoordinate: { latitude, longitude }
     } = data.yext
     setGeo({
-      city,
+      city: cityName ? cityName : city,
       state,
-      state_short: state,
+      state_short: '',
       zip,
       location_type: '',
       latitude,
