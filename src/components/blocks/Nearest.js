@@ -32,7 +32,9 @@ const Nearest = ({ localCtaData, onChangeLocation }) => {
             <NearestLocation>
               <>
                 {!!geo && !!geo.city ? (
-                  `${geo?.city} ${geo?.state_short}`
+                  `${geo?.city}${
+                    geo?.state_short ? `, ${geo.state_short}` : ''
+                  }`
                 ) : (
                   <div tw="h-8 w-48 bg-warmGray-300 animate-pulse rounded-sm" />
                 )}
