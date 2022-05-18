@@ -1,7 +1,8 @@
 const stopwords = 'a an and at but by for in nor of on or so the to up yet'
 const defaults = stopwords.split(' ')
 const uppercaseAsDefault = 'servpro'
-
+const defaultReplace = 'Certified: SERVPRO Cleaned'
+const defaultReplaceWith = '<i>Certified: SERVPRO Cleaned<i>'
 const apTitleCase = (str, options) => {
   const opts = options || {}
 
@@ -54,7 +55,7 @@ function apCaseOnlyTitleTags(str) {
     /<h3\b[^>]*>[^<>]*<\/h3>/gi,
     /<h4\b[^>]*>[^<>]*<\/h4>/gi
   ]
-  let newStr = str
+  let newStr = str.replace(defaultReplace, defaultReplaceWith)
   regExps.forEach(regExp => {
     newStr = newStr.replace(regExp, substr => {
       return substr.replace(/(>)[^<>]*(<)/, content => {
