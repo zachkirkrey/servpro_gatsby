@@ -303,9 +303,8 @@ const LocationPage = ({ pageContext, location }) => {
   }
 
   const { sections } = useLocationPageSections()
-
+  console.info(pageContext)
   const seo_desc = `${name} is available 24 hours/7 days a week and will respond quickly to your restoration emergency.`
-
   return (
     <Layout>
       <Seo title={name} description={seo_desc} />
@@ -317,6 +316,7 @@ const LocationPage = ({ pageContext, location }) => {
               streetAddress: `${address.line1}${
                 address.line2 ? ` ${address.line2}` : ''
               }`,
+              areaServed: pageContext.serviceArea.places,
               addressLocality: address.city,
               addressRegion: address.region,
               postalCode: address.postalCode,
@@ -339,7 +339,16 @@ const LocationPage = ({ pageContext, location }) => {
         <script type="application/ld+json">
           {address &&
             generateFranchiseLdJsonMarkupService({
-              name
+              name,
+              ServicesProvided: pageContext.ServicesProvided,
+              streetAddress: `${address.line1}${
+                address.line2 ? ` ${address.line2}` : ''
+              }`,
+              addressLocality: address.city,
+              addressRegion: address.region,
+              postalCode: address.postalCode,
+              url: `${location.origin}/${location.pathname}`,
+              telePhone: mainPhone
             })}
         </script>
       </Helmet>

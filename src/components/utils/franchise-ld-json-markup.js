@@ -8,7 +8,8 @@ export function generateFranchiseLdJsonMarkup({
   telePhone = '',
   LATITUDE = 0,
   LONGITUDE = 0,
-  geoRadius = 0
+  geoRadius = 0,
+  areaServed = ''
 }) {
   const data = {
     '@context': 'https://schema.org',
@@ -43,15 +44,10 @@ export function generateFranchiseLdJsonMarkup({
       }
     ],
     priceRange: '$$',
-    areaServed: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: LATITUDE,
-        longitude: LONGITUDE
-      },
-      geoRadius
-    }
+    areaServed: areaServed.map(elem => ({
+      '@type': 'City',
+      name: elem
+    }))
   }
 
   return JSON.stringify(data)
