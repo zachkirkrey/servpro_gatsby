@@ -17,9 +17,17 @@ import { BREAKPOINT_SM } from '../../constants/constants'
 const Headline = props => {
   const { as: Component, children } = props
   return Component ? (
-    <Component>{apCaseOnlyTitleTags(children)}</Component>
+    <Component
+      dangerouslySetInnerHTML={{
+        __html: apCaseOnlyTitleTags(children)
+      }}
+    />
   ) : (
-    <h3>{apCaseOnlyTitleTags(children)}</h3>
+    <h3
+      dangerouslySetInnerHTML={{
+        __html: apCaseOnlyTitleTags(children)
+      }}
+    />
   )
 }
 
