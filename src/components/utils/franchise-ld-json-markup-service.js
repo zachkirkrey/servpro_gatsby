@@ -1,12 +1,29 @@
-export function generateFranchiseLdJsonMarkupService({ name = '' }) {
+export function generateFranchiseLdJsonMarkupService({
+  name = '',
+  ServicesProvided = '',
+  streetAddress = '',
+  addressLocality = '',
+  addressRegion = '',
+  postalCode = '',
+  telePhone = ''
+}) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: '24/7 water, fire, smoke, mold, and mildew damage cleanup',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'SERVPRO'
+      name: 'SERVPRO',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress,
+        addressLocality,
+        addressRegion,
+        postalCode
+      },
+      telePhone
     },
+
     areaServed: {
       '@type': 'State',
       name
@@ -18,49 +35,13 @@ export function generateFranchiseLdJsonMarkupService({ name = '' }) {
         {
           '@type': 'OfferCatalog',
           name: 'Property damage cleanup',
-          itemListElement: [
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Fire damage cleaning'
-              }
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Water damage cleaning'
-              }
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Smoke damage cleaning'
-              }
+          itemListElement: ServicesProvided.map(elem => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: elem
             }
-          ]
-        },
-        {
-          '@type': 'OfferCatalog',
-          name: 'Mold & mildew cleaning',
-          itemListElement: [
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Mold cleaning'
-              }
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Mildew cleaning'
-              }
-            }
-          ]
+          }))
         }
       ]
     }
