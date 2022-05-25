@@ -9,6 +9,7 @@ import isPropValid from '@emotion/is-prop-valid'
 import formatPhoneLink from '../utils/format-phone-link'
 import AccessibleLink from './AccessibleLink'
 import { useLocator } from '../../hooks/use-locator'
+import { useHideNationalCta } from '@hooks/use-hide-national-cta'
 
 const StickyButton = ({ inverse, handleChangeLocation, localCtaData }) => {
   const [isLocationDetailVisible, setIsLocationDetailVisible] = useState(false)
@@ -16,6 +17,7 @@ const StickyButton = ({ inverse, handleChangeLocation, localCtaData }) => {
   const lastScrollTop = React.useRef(0)
 
   const { franchise: locatorFranchise } = useLocator()
+  const { out_of_service_mode } = useHideNationalCta()
 
   const franchise = localCtaData?.franchise
     ? localCtaData?.franchise
@@ -75,11 +77,15 @@ const StickyButton = ({ inverse, handleChangeLocation, localCtaData }) => {
               <div tw="h-2 w-full xs:(h-4 w-[140px]) pt-2 mt-2 bg-warmGray-300 animate-pulse rounded-md" />
             )}
           </FooterMobileButton>
-          <Divider inverse={inverse} />
-          <FooterMobileButton to={`tel: +${formatPhoneLink(frPhone)}`}>
-            National Call Center <br />
-            <span tw="text-sm xs:text-lg">1-800-SERVPRO</span>
-          </FooterMobileButton>
+          {!out_of_service_mode && (
+            <>
+              <Divider inverse={inverse} />
+              <FooterMobileButton to={`tel: +${formatPhoneLink(frPhone)}`}>
+                National Call Center <br />
+                <span tw="text-sm xs:text-lg">1-800-SERVPRO</span>
+              </FooterMobileButton>
+            </>
+          )}
         </MobileButtonsWrap>
       </FooterMobileStickyWrapper>
       <LocationDetail

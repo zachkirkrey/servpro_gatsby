@@ -7,9 +7,11 @@ import { useLocator } from '@hooks/use-locator'
 import formatPhoneLink from '@utils/format-phone-link'
 import { RatingSummary } from '@atoms/RatingSummary'
 import ChangeLocationDrawer from '@sections/ChangeLocationDrawer'
+import { useHideNationalCta } from '@hooks/use-hide-national-cta'
 
 const FooterLocationDetail = ({ isVisible, onClose, localCtaData }) => {
   const { geo: locatorGeo, franchise: locatorFranchise } = useLocator()
+  const { out_of_service_mode } = useHideNationalCta()
 
   const geo = localCtaData?.geo ? localCtaData?.geo : locatorGeo
   const franchise = localCtaData?.franchise
@@ -107,10 +109,14 @@ const FooterLocationDetail = ({ isVisible, onClose, localCtaData }) => {
             )}
           </div>
           <div tw="h-px w-full bg-gray-300 mt-7 mb-8" />
-          <p tw="text-2xl font-semibold mb-3">National Call Center:</p>
-          <Button to={`tel: +${formatPhoneLink(frPhone)}`} isBig={true}>
-            1-800-SERVPRO
-          </Button>
+          {!out_of_service_mode && (
+            <>
+              <p tw="text-2xl font-semibold mb-3">National Call Center:</p>
+              <Button to={`tel: +${formatPhoneLink(frPhone)}`} isBig={true}>
+                1-800-SERVPRO
+              </Button>
+            </>
+          )}
         </LocationDetail>
       </LocationDetailWrap>
 
