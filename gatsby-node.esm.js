@@ -1105,7 +1105,7 @@ exports.createPages = async ({ actions, graphql }) => {
     // Regex for `/news-press-releases/{any number}`
     const prRegEx = /^\/news-press-releases\/[0-9]/i
     // Helper function to turn a PR url into the year for sorting
-    const prUrlToYear = url => url.slice(21, 23)
+    const prUrlToYear = url => url.slice(23, 25)
 
     // Start bucketing press releases by year:
     const sortedPress = pressReleases
