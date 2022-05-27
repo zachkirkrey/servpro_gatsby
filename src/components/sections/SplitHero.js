@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import tw, { styled, css } from 'twin.macro'
 import SvgSafeGatsbyImage from '@atoms/SvgSafeGatsbyImage'
 import Button from '@atoms/Button'
@@ -8,8 +8,11 @@ import Nearest from '@blocks/Nearest'
 import apCaseOnlyTitleTags from '@utils/apCaseOnlyTitleTags'
 import replaceReview from '@utils/replaceReview'
 import replaceButton from '@utils/replaceButton'
+import ChangeLocationDrawer from '@sections/ChangeLocationDrawer'
 
 const SplitHero = ({ data, localCtaData, handleChangeLocation, ...props }) => {
+  const [locationChangeVisible, setLocationChangeVisible] = useState(false)
+  console.info('locationChangeVisible', locationChangeVisible)
   const {
     button_link,
     button_link_2,
@@ -94,12 +97,25 @@ const SplitHero = ({ data, localCtaData, handleChangeLocation, ...props }) => {
         </ImageCol>
       </HeroWrap>
       {!!has_location_widget && (
-        <NearestWrapper>
-          <Nearest
+        <>
+          <NearestWrapper>
+            <Nearest
+              onChangeLocation={() =>
+                setTimeout(() => {
+                  setLocationChangeVisible(true)
+                }, 0)
+              }
+              localCtaData={localCtaData}
+              handleChangeLocation={handleChangeLocation}
+            />
+          </NearestWrapper>
+          <ChangeLocationDrawer
+            visible={locationChangeVisible}
+            onClose={() => setLocationChangeVisible(false)}
             localCtaData={localCtaData}
             handleChangeLocation={handleChangeLocation}
           />
-        </NearestWrapper>
+        </>
       )}
     </section>
   )
