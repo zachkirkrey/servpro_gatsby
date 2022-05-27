@@ -56,8 +56,10 @@ const FooterLocationDetail = ({ isVisible, onClose, localCtaData }) => {
             </p>
             <div tw="mb-2">
               <LocationName>
-                {!!geo && !!geo.city && !!geo.state_short ? (
-                  `${geo?.city}, ${geo?.state_short}`
+                {!!geo && !!geo.city ? (
+                  `${geo?.city}${
+                    geo?.state_short ? `, ${geo.state_short}` : ''
+                  }`
                 ) : (
                   <span tw="inline-block h-8 w-48 bg-warmGray-300 animate-pulse rounded-sm" />
                 )}
