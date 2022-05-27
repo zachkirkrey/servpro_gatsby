@@ -11,14 +11,8 @@ import apCaseOnlyTitleTags from '@utils/apCaseOnlyTitleTags'
 // Can't read the data param; as there's no GQL frag/query.
 const CommunityBanner = ({ data }) => {
   const { background, content } = data
-  const {
-    alignment,
-    headline,
-    copy,
-    icon,
-    button_link,
-    disable_content
-  } = content
+  const { alignment, headline, copy, icon, button_link, disable_content } =
+    content
   const { image, fill_screen_height } = background
 
   return (
@@ -46,7 +40,7 @@ const CommunityBanner = ({ data }) => {
         )}
         {!!image?.url && (
           <div tw="absolute inset-0">
-            <BackgroundImage image={image} alt={image.title} />
+            <BackgroundImage image={image} alt={image.description} />
           </div>
         )}
       </Container>
@@ -89,6 +83,7 @@ export const query = graphql`
           filename
           title
           url
+          description
           localAsset {
             childImageSharp {
               gatsbyImageData(

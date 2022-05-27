@@ -28,6 +28,7 @@ export const query = graphql`
       heading
       subheading
       copy
+      hero_offset
       button_link {
         href
         title
@@ -39,6 +40,7 @@ export const query = graphql`
       image {
         filename
         title
+        description
         url
         localAsset {
           childImageSharp {

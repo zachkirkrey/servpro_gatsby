@@ -21,7 +21,6 @@ const BasicCTA = ({ data }) => {
     disable_mobile = false,
     disable_desktop = false
   } = data ?? ''
-
   return (
     <BasicCTASection
       css={!use_default_cta && paddingDefault()}
@@ -66,7 +65,7 @@ const BasicCTA = ({ data }) => {
           <SvgSafeGatsbyImage
             tw="absolute inset-0 w-full h-full object-cover opacity-80"
             image={background_image}
-            alt={background_image.title}
+            alt={background_image.description}
           />
         </div>
       )}
@@ -98,6 +97,7 @@ export const query = graphql`
       background_image {
         filename
         title
+        description
         url
         localAsset {
           url

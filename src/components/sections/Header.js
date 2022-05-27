@@ -35,11 +35,10 @@ const Header = ({
   const [isGlobalNavVisible, setIsGlobalNavVisible] = useState(false)
   const [isDropdownMenuVisible, setIsDropdownMenuVisible] = useState(false)
   const [locationChangeVisible, setLocationChangeVisible] = useState(false)
-
   useEffect(() => {
     document.documentElement.style.overflow = isGlobalNavVisible ? 'hidden' : ''
   }, [isGlobalNavVisible])
-
+  console.info(isGlobalNavVisible)
   const toggleDropdown = () => {
     const newState = franchise ? !isDropdownMenuVisible : false
     setIsDropdownMenuVisible(newState)
@@ -118,7 +117,7 @@ const Header = ({
               </div>
               <button
                 className="hover-default"
-                onClick={() => setIsGlobalNavVisible(true)}>
+                onClick={() => setIsGlobalNavVisible(current => !current)}>
                 <NavIcon />
                 <MenuText>Menu</MenuText>
               </button>
@@ -131,7 +130,7 @@ const Header = ({
         onClose={() => setLocationChangeVisible(false)}
       />
       <GlobalNav
-        onClose={() => setIsGlobalNavVisible(false)}
+        onClose={() => setIsGlobalNavVisible(current => !current)}
         isVisible={isGlobalNavVisible}
       />
       {!hideLocalCta && (
@@ -196,6 +195,6 @@ const StyledArrowDropdown = styled(ArrowDropdown)(({ menuopen }) => [
   menuopen && tw`rotate-180`
 ])
 
-const MenuText = tw.span`hidden lg:block text-sm`
+const MenuText = tw.span`lg:block text-sm`
 
 export default Header

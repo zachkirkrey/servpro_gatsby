@@ -73,6 +73,18 @@ const Seo = ({
         {
           name: `twitter:image`,
           content: imageUrl
+        },
+        {
+          name: `theme-color`,
+          content: `#ffffff`
+        },
+        {
+          name: `msapplication-navbutton-color`,
+          content: `#ffffff`
+        },
+        {
+          name: `apple-mobile-web-app-status-bar-style`,
+          content: `#ffffff`
         }
       ]
         .filter(item => item.content)

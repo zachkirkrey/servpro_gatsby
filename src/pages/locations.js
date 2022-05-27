@@ -47,7 +47,7 @@ let Header = ({ data, query, handleSearch }, ref) => {
         </Container>
         <RightCol>
           <ImageWrap>
-            {image?.url && <HeroImage image={image} alt={image.title} />}
+            {image?.url && <HeroImage image={image} alt={image.description} />}
           </ImageWrap>
         </RightCol>
       </HeroWrap>
@@ -64,7 +64,7 @@ const FranchiseLocatorPage = ({ data, location }) => {
   const heroRef = React.useRef(null)
   const [cachedSearchEnabled, setCachedSearchEnabled] = React.useState(false)
   const { seo } = cmsFranchiseSearchSections
-
+  console.info(data)
   const handleSearch = address => {
     if (isBrowser() && !!address && qry !== address) {
       setQry(address)
@@ -256,6 +256,7 @@ export const query = graphql`
       image {
         filename
         title
+        description
         url
         localAsset {
           childImageSharp {

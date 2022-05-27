@@ -98,7 +98,7 @@ const ArticlePage = ({ data, pageContext }) => {
               {featured_image?.url && (
                 <FeaturedImage
                   image={featured_image}
-                  alt={featured_image.title}
+                  alt={featured_image.description}
                 />
               )}
             </div>
@@ -173,6 +173,7 @@ export const query = graphql`
       featured_image {
         filename
         title
+        description
         url
         localAsset {
           childImageSharp {
@@ -228,6 +229,7 @@ export const query = graphql`
       featured_image {
         filename
         title
+        description
         url
         localAsset {
           childImageSharp {

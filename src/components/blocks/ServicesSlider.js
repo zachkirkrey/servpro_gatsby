@@ -4,7 +4,6 @@ import IconButtonsSlider from '@sections/IconButtonsSlider'
 
 const ServicesSlider = ({ data }) => {
   const { services } = data
-
   const getServicesAsIconButtonSlides = () => {
     if (!!services && services.length > 0) {
       const slides = services.map(service => {
