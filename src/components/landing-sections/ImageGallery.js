@@ -11,6 +11,7 @@ import { useInView } from 'react-intersection-observer'
 import { usePanelScrollingAnimationLogic } from '../../hooks/use-panel-scrolling-animation-logic'
 import TextAnimation from '@landing-sections/TextAnimation'
 import NumberBlock from '@landing-sections/NumberBlock'
+import ImageSlider from '@landing-sections/ImageSlider'
 import { BREAKPOINT_MD } from '../../constants/constants'
 import MediaModal from './MediaModal'
 import { useMediaModal } from '../../hooks/use-media-modal'
@@ -205,61 +206,67 @@ const ImageGallery = () => {
   }
 
   return (
-    <GalleryWrapper ref={containerRef}>
-      <RadialAnimationContainer>
-        <Lottie options={defaultOptions} isStopped={!inView} />
-      </RadialAnimationContainer>
-      <div tw="h-full">
-        <NumberBlockWrapper>
-          <NumberBlock>
-            <TextAnimation shouldRun={inView}>{numbers}</TextAnimation>
-          </NumberBlock>
-        </NumberBlockWrapper>
-        <div tw="py-8 h-full">
-          <div
-            tw="flex flex-col h-full justify-center items-center"
-            data-switch-visibility
-            ref={inViewRef}>
-            <StyledContainer>
-              <Title className="font-family-video" data-show-animation>
-                <TextAnimation shouldRun={inView} isText={true} duration={1.15}>
-                  {title}
-                </TextAnimation>
-              </Title>
-              <GalleryItems data-show-animation>
-                {galleryImages.map((image, index) => {
-                  return (
-                    <GalleryItem
-                      key={index}
-                      index={index}
-                      onClick={() => mediaModal.open(image.imagePath)}>
-                      <div tw="w-full h-full max-h-full">
-                        <GatsbyImage
-                          tw="w-full h-full"
-                          objectFit="cover"
-                          alt="Gallery Image"
-                          image={getImage(image.image)}
-                        />
-                      </div>
-                    </GalleryItem>
-                  )
-                })}
-              </GalleryItems>
-            </StyledContainer>
+    <>
+      <GalleryWrapper ref={containerRef}>
+        <RadialAnimationContainer>
+          <Lottie options={defaultOptions} isStopped={!inView} />
+        </RadialAnimationContainer>
+        <div tw="h-full">
+          <NumberBlockWrapper>
+            <NumberBlock>
+              <TextAnimation shouldRun={inView}>{numbers}</TextAnimation>
+            </NumberBlock>
+          </NumberBlockWrapper>
+          <div tw="py-8 h-full">
+            <div
+              tw="flex flex-col h-full justify-center items-center"
+              data-switch-visibility
+              ref={inViewRef}>
+              <StyledContainer>
+                <Title className="font-family-video" data-show-animation>
+                  <TextAnimation
+                    shouldRun={inView}
+                    isText={true}
+                    duration={1.15}>
+                    {title}
+                  </TextAnimation>
+                </Title>
+                <GalleryItems data-show-animation>
+                  {galleryImages.map((image, index) => {
+                    return (
+                      <GalleryItem
+                        key={index}
+                        index={index}
+                        onClick={() => mediaModal.open(image.imagePath)}>
+                        <div tw="w-full h-full max-h-full">
+                          <GatsbyImage
+                            tw="w-full h-full"
+                            objectFit="cover"
+                            alt="Gallery Image"
+                            image={getImage(image.image)}
+                          />
+                        </div>
+                      </GalleryItem>
+                    )
+                  })}
+                </GalleryItems>
+              </StyledContainer>
+            </div>
           </div>
         </div>
-      </div>
-      <BackgroundImageWrapper>
-        <StaticImage
-          width={1920}
-          tw="absolute inset-0 w-full h-full"
-          alt="Background Image"
-          formats={['AUTO', 'WEBP', 'AVIF']}
-          src="../../images/bg-4.jpg"
-        />
-      </BackgroundImageWrapper>
-      <MediaModal {...mediaModal} />
-    </GalleryWrapper>
+        <BackgroundImageWrapper>
+          <StaticImage
+            width={1920}
+            tw="absolute inset-0 w-full h-full"
+            alt="Background Image"
+            formats={['AUTO', 'WEBP', 'AVIF']}
+            src="../../images/bg-4.jpg"
+          />
+        </BackgroundImageWrapper>
+        <MediaModal {...mediaModal} />
+      </GalleryWrapper>
+      <ImageSlider galleryImages={galleryImages} />
+    </>
   )
 }
 
@@ -272,6 +279,9 @@ const StyledContainer = styled(ContainerAlt)`
   ${tw`relative z-10 flex flex-col h-full justify-center 2xl:px-8`}
 `
 const GalleryItems = styled.div`
+  @media (max-width: ${BREAKPOINT_MD}px) {
+    display: none;
+  }
   ${tw`overflow-hidden`}
   font-size: 0;
   line-height: 0;
