@@ -11,11 +11,11 @@ export default async function corsHandler(req, res) {
   // Run Cors middleware and handle errors.
   await new Promise((resolve, reject) => {
     cors(req, res, async result => {
-      const { latitude, longitude, address } = req.query || null
+      const { latitude, longitude, location_type, address } = req.query || null
       let geo = {}
 
       // 1. Get `geo` via most accurate method:
-      if (!!latitude && !!longitude) {
+      if (!!latitude && !!longitude && location_type === 'browser-api') {
         geo = await reverseGeoCode({ latlng: `${latitude},${longitude}` })
       } else if (address) {
         geo = await reverseGeoCode({ address })
