@@ -30,6 +30,7 @@ const ImageSlider = ({ galleryImages }) => {
                       tw="w-full h-full"
                       objectFit="cover"
                       alt="Gallery Image"
+                      key={index}
                       image={getImage(image.image)}
                     />
                   </div>
