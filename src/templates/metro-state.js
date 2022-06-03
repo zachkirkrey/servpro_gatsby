@@ -76,11 +76,18 @@ const MetroStatePage = ({ data, pageContext }) => {
             <MetroList>
               {orderBy(franchiseLinksUniq, ['yext.name']).map(fr => {
                 return (
-                  <MetroName key={fr.yext.name}>
-                    <Link to={`${fr.permalink}`} title={fr.yext.name}>
-                      {fr.yext.name}
-                    </Link>
-                  </MetroName>
+                  <>
+                    {fr.yext.serviceArea.places[0].slice(-2) ==
+                    stateSlug.substring(1).toUpperCase() ? (
+                      <MetroName key={fr.yext.name}>
+                        <Link to={`${fr.permalink}`} title={fr.yext.name}>
+                          {fr.yext.name}
+                        </Link>
+                      </MetroName>
+                    ) : (
+                      ''
+                    )}
+                  </>
                 )
               })}
             </MetroList>
