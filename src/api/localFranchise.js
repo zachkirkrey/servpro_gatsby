@@ -15,7 +15,7 @@ export default async function corsHandler(req, res) {
       let geo = {}
 
       // 1. Get `geo` via most accurate method:
-      if (!!latitude && !!longitude && location_type === 'browser-api') {
+      if (!!latitude && !!longitude && location_type !== undefined) {
         geo = await reverseGeoCode({ latlng: `${latitude},${longitude}` })
       } else if (address) {
         geo = await reverseGeoCode({ address })

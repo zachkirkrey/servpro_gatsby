@@ -15,7 +15,7 @@ const fetchNearestByCoords = async ({ queryKey }) => {
   if (!coords || !coords?.latitude || !coords?.longitude) {
     return {}
   }
-  const api_url = `/api/localFranchise?latitude=${coords.latitude}&longitude=${coords.longitude}`
+  const api_url = `/api/localFranchise?latitude=${coords.latitude}&longitude=${coords.longitude}&location_type=${coords.location_type}`
   return await (await fetch(api_url)).json()
 }
 
