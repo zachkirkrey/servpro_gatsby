@@ -63,6 +63,7 @@ function apCaseOnlyTitleTags(str) {
       })
     })
   })
+
   return newStr
 }
 
