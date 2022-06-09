@@ -288,6 +288,10 @@ const staticLinks = [
       {
         title: 'Privacy Policy',
         url: 'privacyPolicy'
+      },
+      {
+        title: 'Cookie Settings',
+        className: 'ot-sdk-show-settings'
       }
       // {
       //   title: 'California: Your Privacy Rights',
@@ -336,78 +340,100 @@ const Footer = () => {
                   <NavTitle tw="font-medium">{group.title}</NavTitle>
                   <NavContainer tw="xs:space-x-10">
                     <NavLinks tw="xs:(w-full)" doubleWidth={doubleWidth}>
-                      {group.links.map(({ title, url, sublinks = [] }, i) => {
-                        return (
-                          <React.Fragment key={i}>
-                            <NavLinksItem>
-                              {getPath[url]() ? (
-                                <AccessibleLink to={getPath[url]()}>
-                                  {title}
-                                </AccessibleLink>
-                              ) : (
-                                <p tw="cursor-default">{title}</p>
-                              )}
-                            </NavLinksItem>
-                            {sublinks.length > 0 &&
-                              sublinks.map(
-                                (
-                                  {
-                                    title: sublinkTitle,
-                                    url: sublinkUrl,
-                                    sublinks: nestedSublinks = []
-                                  },
-                                  j
-                                ) => {
-                                  return (
-                                    <React.Fragment key={j}>
-                                      <NavLinksItem tw="xs:ml-2">
-                                        {getPath[sublinkUrl]() ? (
-                                          <AccessibleLink
-                                            to={getPath[sublinkUrl]()}>
-                                            {sublinkTitle}
-                                          </AccessibleLink>
-                                        ) : (
-                                          <p tw="cursor-default">
-                                            {sublinkTitle}
-                                          </p>
-                                        )}
-                                      </NavLinksItem>
-                                      {nestedSublinks.length > 0 &&
-                                        nestedSublinks.map(
-                                          (
-                                            {
-                                              title: nestedSublinkTitle,
-                                              url: nestedSublinkUrl
-                                            },
-                                            k
-                                          ) => {
-                                            return (
-                                              <NavLinksItem
-                                                key={k}
-                                                tw="xs:ml-2">
-                                                {getPath[sublinkUrl]() ? (
-                                                  <AccessibleLink
-                                                    to={getPath[
-                                                      nestedSublinkUrl
-                                                    ]()}>
-                                                    {nestedSublinkTitle}
-                                                  </AccessibleLink>
-                                                ) : (
-                                                  <p tw="cursor-default">
-                                                    {nestedSublinkTitle}
-                                                  </p>
-                                                )}
-                                              </NavLinksItem>
-                                            )
-                                          }
-                                        )}
-                                    </React.Fragment>
-                                  )
-                                }
-                              )}
-                          </React.Fragment>
-                        )
-                      })}
+                      {group.links.map(
+                        ({ title, url, className, sublinks = [] }, i) => {
+                          return (
+                            <React.Fragment key={i}>
+                              <NavLinksItem>
+                                {url && getPath[url]() ? (
+                                  <AccessibleLink
+                                    to={getPath[url]()}
+                                    className={className}>
+                                    {title}
+                                  </AccessibleLink>
+                                ) : (
+                                  <p tw="cursor-default" className={className}>
+                                    {title}
+                                  </p>
+                                )}
+                              </NavLinksItem>
+                              {sublinks.length > 0 &&
+                                sublinks.map(
+                                  (
+                                    {
+                                      title: sublinkTitle,
+                                      url: sublinkUrl,
+                                      className: subClassName,
+                                      sublinks: nestedSublinks = []
+                                    },
+                                    j
+                                  ) => {
+                                    return (
+                                      <React.Fragment key={j}>
+                                        <NavLinksItem tw="xs:ml-2">
+                                          {sublinkUrl &&
+                                          getPath[sublinkUrl]() ? (
+                                            <AccessibleLink
+                                              to={getPath[sublinkUrl]()}
+                                              className={subClassName}>
+                                              {sublinkTitle}
+                                            </AccessibleLink>
+                                          ) : (
+                                            <p
+                                              tw="cursor-default"
+                                              className={subClassName}>
+                                              {sublinkTitle}
+                                            </p>
+                                          )}
+                                        </NavLinksItem>
+                                        {nestedSublinks.length > 0 &&
+                                          nestedSublinks.map(
+                                            (
+                                              {
+                                                title: nestedSublinkTitle,
+                                                url: nestedSublinkUrl,
+                                                className: nestedClassName
+                                              },
+                                              k
+                                            ) => {
+                                              return (
+                                                <NavLinksItem
+                                                  key={k}
+                                                  tw="xs:ml-2">
+                                                  {nestedSublinkUrl &&
+                                                  getPath[
+                                                    nestedSublinkUrl
+                                                  ]() ? (
+                                                    <AccessibleLink
+                                                      to={getPath[
+                                                        nestedSublinkUrl
+                                                      ]()}
+                                                      className={
+                                                        nestedClassName
+                                                      }>
+                                                      {nestedSublinkTitle}
+                                                    </AccessibleLink>
+                                                  ) : (
+                                                    <p
+                                                      tw="cursor-default"
+                                                      className={
+                                                        nestedClassName
+                                                      }>
+                                                      {nestedSublinkTitle}
+                                                    </p>
+                                                  )}
+                                                </NavLinksItem>
+                                              )
+                                            }
+                                          )}
+                                      </React.Fragment>
+                                    )
+                                  }
+                                )}
+                            </React.Fragment>
+                          )
+                        }
+                      )}
                     </NavLinks>
                   </NavContainer>
                 </LinksColumn>

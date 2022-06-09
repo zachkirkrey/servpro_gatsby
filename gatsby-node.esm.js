@@ -1175,7 +1175,7 @@ exports.createPages = async ({ actions, graphql }) => {
       metroPages.map(async node => {
         const slug = node.url.replace(/^.*\/(.*)$/, '$1')
         const state = node.state
-        const state_slug = state ? state[0].url : '/all'
+        const state_slug = state && state[0] ? state[0].url : '/all'
         const state_abbr = state_slug
           ? state_slug.substring(1).toUpperCase()
           : ''
