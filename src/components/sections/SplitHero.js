@@ -9,7 +9,13 @@ import apCaseOnlyTitleTags from '@utils/apCaseOnlyTitleTags'
 import replaceReview from '@utils/replaceReview'
 import replaceButton from '@utils/replaceButton'
 
-const SplitHero = ({ data, localCtaData, handleChangeLocation, ...props }) => {
+const SplitHero = ({
+  data,
+  stateOutOfService,
+  localCtaData,
+  handleChangeLocation,
+  ...props
+}) => {
   const {
     button_link,
     button_link_2,
@@ -93,7 +99,7 @@ const SplitHero = ({ data, localCtaData, handleChangeLocation, ...props }) => {
           <ImageDotPattern />
         </ImageCol>
       </HeroWrap>
-      {!!has_location_widget && (
+      {!!has_location_widget && !stateOutOfService && (
         <NearestWrapper>
           <Nearest
             localCtaData={localCtaData}

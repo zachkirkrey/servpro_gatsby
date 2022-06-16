@@ -13,6 +13,8 @@ import formatPhoneLink from '@utils/format-phone-link'
 import GlobalNav from '@sections/GlobalNav'
 import StickyButton from '@atoms/StickyButton'
 import { useHideLocalCta } from '../../hooks/use-hide-local-cta'
+import { useStateOutOfService } from '@hooks/use-state-out-of-service'
+
 import { BREAKPOINT_MD } from '../../constants/constants'
 import ChangeLocationDrawer from '@sections/ChangeLocationDrawer'
 
@@ -23,7 +25,7 @@ const Header = ({
   handleChangeLocation,
   hiddenForced
 }) => {
-  const { franchise: locatorFranchise } = useLocator()
+  const { franchise: locatorFranchise, geo } = useLocator()
   const franchise = localCtaData?.franchise
     ? localCtaData?.franchise
     : locatorFranchise
@@ -31,14 +33,28 @@ const Header = ({
   const { yext } = franchise ?? {}
   const { mainPhone: frPhone } = yext ?? {}
   const hideLocalCta = useHideLocalCta()
+  const { states_out_of_service } = useStateOutOfService()
 
+  //remove '/' from states
+  const stateNamesOutOfService = states_out_of_service.map(({ url }) =>
+    url.replace(/^.*\/(.*)$/, '$1').toUpperCase()
+  )
   const [isGlobalNavVisible, setIsGlobalNavVisible] = useState(false)
   const [isDropdownMenuVisible, setIsDropdownMenuVisible] = useState(false)
   const [locationChangeVisible, setLocationChangeVisible] = useState(false)
+  //set out of service message
+  const [stateOutOfService, setStateOutOfService] = useState(false)
+
   useEffect(() => {
     document.documentElement.style.overflow = isGlobalNavVisible ? 'hidden' : ''
   }, [isGlobalNavVisible])
   console.info(isGlobalNavVisible)
+
+  useEffect(() => {
+    const ticker = stateNamesOutOfService.includes(geo?.state_short)
+    setStateOutOfService(ticker)
+  }, [geo?.state_short])
+  console.info(geo)
   const toggleDropdown = () => {
     const newState = franchise ? !isDropdownMenuVisible : false
     setIsDropdownMenuVisible(newState)
@@ -46,6 +62,17 @@ const Header = ({
 
   return (
     <>
+      {stateOutOfService ? (
+        <div
+          style={{ textAlign: 'center' }}
+          dangerouslySetInnerHTML={{
+            __html:
+              'Your local franchise is currently assisting another customer. For faster service, we are connecting you with our  National Call Center.'
+          }}
+        />
+      ) : (
+        ''
+      )}
       <HeadroomWrapper alwaysFixed={alwaysFixed} hiddenForced={hiddenForced}>
         <header css={[tw`w-full bg-white py-4 lg:py-8`, small && tw`lg:py-2`]}>
           <Container tw="flex items-center justify-between">
@@ -62,7 +89,7 @@ const Header = ({
                   Call Today - 24/7 Emergency Services
                 </p>
                 <HeaderCol>
-                  {!hideLocalCta && (
+                  {!hideLocalCta && !stateOutOfService && (
                     <>
                       <LocationFinder>
                         <LocationFinderLabel>

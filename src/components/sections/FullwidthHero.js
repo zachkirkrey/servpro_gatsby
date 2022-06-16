@@ -9,7 +9,12 @@ import Nearest from '@blocks/Nearest'
 import apCaseOnlyTitleTags from '@utils/apCaseOnlyTitleTags'
 import ChangeLocationDrawer from '@sections/ChangeLocationDrawer'
 
-const FullwidthHero = ({ data, localCtaData, handleChangeLocation }) => {
+const FullwidthHero = ({
+  data,
+  localCtaData,
+  handleChangeLocation,
+  stateOutOfService
+}) => {
   const { button_link, copy, image, heading, subheading, has_location_widget } =
     data
   const hasImage = !!image?.url
@@ -40,7 +45,7 @@ const FullwidthHero = ({ data, localCtaData, handleChangeLocation }) => {
           )}
         </FullwidthWrap>
       </Container>
-      {!!has_location_widget && (
+      {!!has_location_widget && !stateOutOfService && (
         <>
           <NearestWrapper>
             <Nearest
