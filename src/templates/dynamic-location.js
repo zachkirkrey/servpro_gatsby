@@ -303,7 +303,6 @@ const LocationPage = ({ pageContext, location }) => {
   }
 
   const { sections } = useLocationPageSections()
-  console.info(pageContext)
   const seo_desc = `${name} is available 24 hours/7 days a week and will respond quickly to your restoration emergency.`
   return (
     <Layout>
@@ -316,7 +315,7 @@ const LocationPage = ({ pageContext, location }) => {
               streetAddress: `${address.line1}${
                 address.line2 ? ` ${address.line2}` : ''
               }`,
-              areaServed: pageContext.serviceArea.places,
+              areaServed: pageContext.serviceArea?.places,
               addressLocality: address.city,
               addressRegion: address.region,
               postalCode: address.postalCode,
