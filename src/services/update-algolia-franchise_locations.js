@@ -105,6 +105,14 @@ const updateFranchiseLocations = async () => {
     const locationsIndex = algoliaClient.initIndex(
       ALGOLIA_FRANCHISE_LOCATIONS_INDEX
     )
+    // cleaar the index
+    locationsIndex
+      .clearObjects()
+      .wait()
+      .then(response => {
+        console.info(response)
+      })
+
     const limit = 50
     const entityTypes = 'location'
     const fields =
