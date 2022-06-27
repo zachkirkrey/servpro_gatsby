@@ -57,8 +57,6 @@ export const rankedFranchiseByCoord = async (
     attributesToRetrieve
   )
 
-  enrichedFranchises.filter(item => item)
-
   // 3. Rank the results
   const results = await applyRankingToFranchiseResults(
     enrichedFranchises,
@@ -67,7 +65,7 @@ export const rankedFranchiseByCoord = async (
 
   results.filter(item => item)
 
-  return results.slice(0, 5) || []
+  return results.filter(item => item.yext).slice(0, 5) || []
 }
 
 export const franchiseById = async (id, attributesToRetrieve = []) => {

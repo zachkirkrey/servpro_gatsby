@@ -16,24 +16,28 @@ const DrawerAddressItem = ({ data, onChoose }) => {
   const { average_rating: rating, review_count } = data
 
   return (
-    <div tw="flex items-center justify-between py-2">
-      <p tw="font-bold text-lg md:text-xl max-w-[50%] mr-2">{data.yext.name}</p>
-      <div tw="flex flex-col items-center">
-        <button
-          className="change-location-select-cta"
-          tw="text-sm py-2 px-2 bg-primary text-white mb-2 font-semibold md:(text-base px-7)"
-          onClick={onChoose}>
-          Select This Location
-        </button>
-        {review_count !== 0 && (
-          <RatingSummary
-            smallSize={true}
-            rating={rating}
-            count={review_count}
-          />
-        )}
+    !!data.yext && (
+      <div tw="flex items-center justify-between py-2">
+        <p tw="font-bold text-lg md:text-xl max-w-[50%] mr-2">
+          {data.yext.name}
+        </p>
+        <div tw="flex flex-col items-center">
+          <button
+            className="change-location-select-cta"
+            tw="text-sm py-2 px-2 bg-primary text-white mb-2 font-semibold md:(text-base px-7)"
+            onClick={onChoose}>
+            Select This Location
+          </button>
+          {review_count !== 0 && (
+            <RatingSummary
+              smallSize={true}
+              rating={rating}
+              count={review_count}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    )
   )
 }
 
