@@ -5,12 +5,18 @@ export function generateFranchiseLdJsonMarkup({
   addressRegion = '',
   postalCode = '',
   url = '',
-  telePhone = ''
+  telePhone = '',
+  LATITUDE = 0,
+  LONGITUDE = 0,
+  geoRadius = 0,
+  areaServed = []
 }) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'HomeAndConstructionBusiness',
     name,
+    // image,
+    // id,
     address: {
       '@type': 'PostalAddress',
       streetAddress,
@@ -37,7 +43,11 @@ export function generateFranchiseLdJsonMarkup({
         closes: '23:59'
       }
     ],
-    priceRange: '$$'
+    priceRange: '$$',
+    areaServed: areaServed?.map(elem => ({
+      '@type': 'City',
+      name: elem
+    }))
   }
 
   return JSON.stringify(data)

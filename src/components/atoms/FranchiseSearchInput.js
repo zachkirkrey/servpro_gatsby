@@ -31,13 +31,16 @@ function Hints({ hintClassName, items, onSelect }, ref) {
   return (
     <StyledHints ref={ref}>
       {items.map((item, index) => {
+        const newArray = item.terms.slice(Math.max(item.terms.length - 3, 0))
+        const cityName = `${newArray[0].value}, ${newArray[1].value}`
+
         return (
           <button
             key={index}
             type="button"
             className={hintClassName}
             tw="h-14 flex items-center px-4 cursor-pointer select-none hover:text-gray-500 w-full border-none"
-            onClick={() => onSelect(item.description)}
+            onClick={() => onSelect(cityName)}
             onKeyDown={handleKeyDown}>
             <span tw="overflow-hidden overflow-ellipsis whitespace-nowrap">
               {item.description}
@@ -95,6 +98,7 @@ const FranchiseAddressSearchInput = props => {
           }
           setHints(
             result.predictions.map(item => {
+              console.info(item)
               return {
                 ...item,
                 description: item.description?.replace(', USA', '')

@@ -20,6 +20,8 @@ import { parseBlocks } from '@utils/TransformCmsData'
 import { truncateHTML } from '../components/utils/Truncate'
 import { filterSortServiceTypes } from '@utils/serviceTypesHelpers'
 import { generateFranchiseLdJsonMarkup } from '../components/utils/franchise-ld-json-markup'
+import { generateFranchiseLdJsonMarkupReviews } from '../components/utils/franchise-ld-json-markup-reviews'
+import { generateFranchiseLdJsonMarkupService } from '../components/utils/franchise-ld-json-markup-service'
 import Seo from '../components/utils/Seo'
 
 // HERO CONTENT
@@ -288,7 +290,10 @@ const LocationPage = ({ pageContext, location }) => {
     ServicesProvided: servicesProvided,
     ProfileExcerpt: profileExcerpt,
     BlogPosts: blogPosts,
-    website
+    website,
+    description,
+    average_rating,
+    review_count
   } = pageContext
 
   const heroImage = {
@@ -298,9 +303,7 @@ const LocationPage = ({ pageContext, location }) => {
   }
 
   const { sections } = useLocationPageSections()
-
   const seo_desc = `${name} is available 24 hours/7 days a week and will respond quickly to your restoration emergency.`
-
   return (
     <Layout>
       <Seo title={name} description={seo_desc} />
@@ -309,6 +312,34 @@ const LocationPage = ({ pageContext, location }) => {
           {address &&
             generateFranchiseLdJsonMarkup({
               name,
+              streetAddress: `${address.line1}${
+                address.line2 ? ` ${address.line2}` : ''
+              }`,
+              areaServed: pageContext.serviceArea?.places,
+              addressLocality: address.city,
+              addressRegion: address.region,
+              postalCode: address.postalCode,
+              url: `${location.origin}/${location.pathname}`,
+              telePhone: mainPhone
+            })}
+        </script>
+        <script type="application/ld+json">
+          {address &&
+            generateFranchiseLdJsonMarkupReviews({
+              name,
+              description,
+              // image,
+              ratingValue: average_rating,
+              // bestRating,
+              // worstRating,
+              ratingCount: review_count
+            })}
+        </script>
+        <script type="application/ld+json">
+          {address &&
+            generateFranchiseLdJsonMarkupService({
+              name,
+              ServicesProvided: pageContext.ServicesProvided,
               streetAddress: `${address.line1}${
                 address.line2 ? ` ${address.line2}` : ''
               }`,

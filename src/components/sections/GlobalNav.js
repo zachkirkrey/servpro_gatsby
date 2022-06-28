@@ -4,6 +4,8 @@ import AccessibleLink from '@atoms/AccessibleLink'
 import Searchbar from '@atoms/Searchbar'
 import SvgSafeGatsbyImage from '@atoms/SvgSafeGatsbyImage'
 import { usePrimaryNav } from '@hooks/use-primary-nav'
+import { useHideNationalCta } from '@hooks/use-hide-national-cta'
+
 import CloseButton from '@atoms/CloseButton'
 import { ReactComponent as LinkedinIcon } from '../../images/svg/linkedin.svg'
 import { ReactComponent as TwitterIcon } from '../../images/svg/twitter.svg'
@@ -67,6 +69,7 @@ const GlobalNav = ({ isVisible, onClose }) => {
 
 const GlobalNavDesktop = ({ onClose, navItems }) => {
   const [indexActiveItem, setIndexActiveItem] = useState(0)
+  const { out_of_service_mode } = useHideNationalCta()
 
   const changeIndexActiveItem = index => {
     setIndexActiveItem(index)
@@ -107,8 +110,12 @@ const GlobalNavDesktop = ({ onClose, navItems }) => {
             />
           </SearchbarWrap>
           <div tw="w-48 mb-16">
-            <p tw="font-bold text-lg mb-1">National Call Center</p>
-            <p tw="font-bold text-lg mb-6">1-800-SERVPRO</p>
+            {!out_of_service_mode && (
+              <>
+                <p tw="font-bold text-lg mb-1">National Call Center</p>
+                <p tw="font-bold text-lg mb-6">1-800-SERVPRO</p>
+              </>
+            )}
             <p>801 Industrial Blvd Gallatin, TN 37066</p>
           </div>
           <div tw="flex items-center space-x-9 mb-7">

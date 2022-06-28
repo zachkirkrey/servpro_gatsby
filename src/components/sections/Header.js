@@ -13,6 +13,7 @@ import formatPhoneLink from '@utils/format-phone-link'
 import GlobalNav from '@sections/GlobalNav'
 import StickyButton from '@atoms/StickyButton'
 import { useHideLocalCta } from '../../hooks/use-hide-local-cta'
+import { useHideNationalCta } from '@hooks/use-hide-national-cta'
 import { BREAKPOINT_MD } from '../../constants/constants'
 import ChangeLocationDrawer from '@sections/ChangeLocationDrawer'
 
@@ -31,6 +32,7 @@ const Header = ({
   const { yext } = franchise ?? {}
   const { mainPhone: frPhone } = yext ?? {}
   const hideLocalCta = useHideLocalCta()
+  const { out_of_service_mode } = useHideNationalCta()
 
   const [isGlobalNavVisible, setIsGlobalNavVisible] = useState(false)
   const [isDropdownMenuVisible, setIsDropdownMenuVisible] = useState(false)
@@ -98,21 +100,25 @@ const Header = ({
                           localCtaData={localCtaData}
                         />
                       </LocationFinder>
+                    </>
+                  )}
+                  {!out_of_service_mode && (
+                    <>
                       <DividerWrap>
                         <Divider />
                       </DividerWrap>
+                      <ContactInfo>
+                        National Call Center
+                        <div tw="flex items-center">
+                          <PhoneLink
+                            className="hover-default"
+                            href={`tel:${PHONE_NUMBER}`}>
+                            1-800-SERVPRO
+                          </PhoneLink>
+                        </div>
+                      </ContactInfo>
                     </>
                   )}
-                  <ContactInfo>
-                    National Call Center
-                    <div tw="flex items-center">
-                      <PhoneLink
-                        className="hover-default"
-                        href={`tel:${PHONE_NUMBER}`}>
-                        1-800-SERVPRO
-                      </PhoneLink>
-                    </div>
-                  </ContactInfo>
                 </HeaderCol>
               </div>
               <button

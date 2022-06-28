@@ -1105,7 +1105,7 @@ exports.createPages = async ({ actions, graphql }) => {
     // Regex for `/news-press-releases/{any number}`
     const prRegEx = /^\/news-press-releases\/[0-9]/i
     // Helper function to turn a PR url into the year for sorting
-    const prUrlToYear = url => url.slice(23, 25)
+    const prUrlToYear = url => url.slice(21, 23)
 
     // Start bucketing press releases by year:
     const sortedPress = pressReleases
@@ -1175,7 +1175,7 @@ exports.createPages = async ({ actions, graphql }) => {
       metroPages.map(async node => {
         const slug = node.url.replace(/^.*\/(.*)$/, '$1')
         const state = node.state
-        const state_slug = state ? state[0].url : '/all'
+        const state_slug = state && state[0] ? state[0].url : '/all'
         const state_abbr = state_slug
           ? state_slug.substring(1).toUpperCase()
           : ''
